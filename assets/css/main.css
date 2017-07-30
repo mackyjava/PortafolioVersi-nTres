@@ -1,0 +1,125 @@
+body {
+  padding-top: 50px; }
+
+.navbar-brand {
+  font-weight: 800; }
+
+.navbar-brand img {
+  width: 60px;
+  height: 60px;
+  margin-top: -12%; }
+
+.imagen {
+  max-width: 300px;
+  margin-bottom: 20px;
+  border-radius: 20%;
+  border: 2px solid #f7e4be; }
+
+.nav-tabs {
+  margin-bottom: 10px; }
+
+.form-group {
+  padding: 10px; }
+
+.type {
+  margin-left: 1px; }
+
+.navbar-inverse .navbar-toggle {
+  background-color: #f0b49e;
+  border: 2px solid #f7e4be;
+  height: 64px; }
+
+.navbar-inverse {
+  background-color: #f0b49e;
+  border: 2px solid #f7e4be;
+  height: 66px; }
+
+#home {
+  padding-top: 0;
+  background-image: url(../img/caffe.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 600px; }
+
+.page-header {
+  border-bottom: 2px solid #413e4a; }
+  .page-header h1 {
+    color: #f7e4be;
+    text-shadow: 2px 2px #413e4a; }
+    .page-header h1 small {
+      color: #f0b49e; }
+
+.list-group-item {
+  background-color: #413e4a;
+  color: white;
+  font-size: 20px;
+  opacity: .8; }
+
+a {
+  font-weight: 700;
+  font-size: 25px;
+  color: white;
+  text-shadow: 2px 2px #413e4a; }
+
+.badge {
+  background-color: #f0b49e;
+  text-shadow: 2px 2px black; }
+
+.badge:hover {
+  transform: scale(2); }
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  background-color: #73626E;
+  opacity: .7;
+  color: #f7e4be; }
+
+.btn.btn-primary {
+  background-image: linear-gradient(#b38184, #f0b49e);
+  color: #413e4a;
+  border: 1px solid #f7e4be; }
+
+.panel-primary > .panel-heading {
+  background-color: #f0b49e;
+  color: #413e4a;
+  border: 1px solid #f7e4be; }
+
+.btn-primary .badge {
+  background-color: #f0b49e;
+  color: #413e4a;
+  border: 1px solid #f7e4be; }
+
+.panel.panel-primary {
+  border: 1px solid #f0b49e; }
+
+.jumbotron {
+  background-image: url("../img/tron.jpg");
+  height: 450px; }
+
+.list-group-item.grande {
+  height: 250px; }
+
+.label.tecnico {
+  margin-left: 2%; }
+
+.bajar {
+  margin-top: 7% !important; }
+
+.img {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%; }
+
+#contacto {
+  position: fixed !important;
+  right: 700px;
+  top: 100px;
+  z-index: 10 !important; }
+
+.panel.panel-primary {
+  width: 94%;
+  position: fixed !important;
+  right: 3%;
+  top: 100px;
+  z-index: 10 !important; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html ng-app ="portafolio">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adriana Jauregui</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="assets/img/logo.png">
+          </a>
+        </div>
+      </div>
+    </div>
+  <div id="home" class="container-fluid">
+  <div ng-controller="PortfolioController as prtCtrl">
+    <div class="page-header">
+      <h1>
+        {{"Adriana M. Jauregui"}}
+        <small>Front End Developer</small>
+      </h1>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <img class="imagen" src="assets/img/yo.jpg">
+         
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" ng-controller="TabsController as tabs" >
+        <ul class="nav nav-tabs nav-justified">
+          <li ng-class="{active:tabs.tab === 1}" ><a href="#" ng-click="tabs.selectTab(1)" >Sobre Mi</a></li>
+          <li ng-class="{active:tabs.tab === 2}"><a href="#" ng-click="tabs.selectTab(2)">Habilidades Técnicas</a></li>
+          <li ng-class="{active:tabs.tab === 3}" ><a href="#" ng-click="tabs.selectTab(3)" >Proyectos</a></li>
+        </ul>
+        <div class="tab-content">
+          <div ng-show="tabs.tab === 1">
+            <ul class="list-group">
+              <li class="list-group-item grande">
+                <strong>Técnico</strong>
+                <p class="pull-right bajar">
+                  <span class="label tecnico tecnico-{{tecnico | lowercase}}" ng-repeat="tecnico in prtCtrl.informacion.tecnico">
+                    {{tecnico}}<br>
+                  </span>
+                </p>
+              </li>
+              <li class="list-group-item grande" >
+                <strong>Personal</strong>
+                <p class="pull-right bajar">
+                   <span class="label  personal personal-{{personal| lowercase}}" ng-repeat="personal in prtCtrl.informacion.personal">
+                    {{personal}}<br>
+                    </span>
+                </p>
+               </li>
+            </ul>
+          </div>
+        </div>
+        <div ng-show="tabs.tab === 2">
+           <ul class="list-group">
+              <li class="list-group-item">
+                <strong>Html 5:</strong>
+                <span class="badge">{{prtCtrl.informacion.skills.html}}</span>
+              </li>
+              <li class="list-group-item">
+                <strong>Css 3:</strong>
+                <span class="badge">{{prtCtrl.informacion.skills.css}}</span>
+              </li>
+              <li class="list-group-item">
+                <strong>Javascript:</strong>
+                <span class="badge">{{prtCtrl.informacion.skills.javascript}}</span>
+              </li>
+              <li class="list-group-item">
+                <strong>jQuery:</strong>
+                <span class="badge"> {{prtCtrl.informacion.skills.jquery}}</span>
+              </li>
+              <li class="list-group-item">
+                <strong>Bootstrap</strong>
+                <span class="badge"> {{prtCtrl.informacion.skills.bootstrap}}</span>
+              </li>
+              <li class="list-group-item">
+                <strong>Materilaize</strong>
+                <span class="badge">{{prtCtrl.informacion.skills.materialize}}</span>
+              </li>
+              <li class="list-group-item">
+                <strong>Sass</strong>
+                <span class="badge">{{prtCtrl.informacion.skills.sass}}</span>
+              </li>
+              <li class="list-group-item">
+                <strong>Git y Github</strong>
+                <span class="badge">{{prtCtrl.informacion.skills.github}}</span>
+              </li>
+              <li class="list-group-item">
+                <strong>Angular</strong>
+                <span class="badge">{{prtCtrl.informacion.skills.angular}}</span>
+              </li>
+            </ul>
+          </div>
+          <div ng-show="tabs.tab === 3">
+            <div class="text-center">
+              <a href="#">
+                <img src=>
+                <p>
+                  <strong>{{}}</strong>
+                </p>
+              </a>
+              <span  class="glyphicon glyphicon-arrow-down"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+          <!-- /tabs -->
+          <div ng-controller = "CommentsController as cmtsCtrl">
+             <div >
+            <button id="contacto" ng-hide ="cmtsCtrl.show === true" ng-click ="cmtsCtrl.toggle()" class="btn btn-primary">Contacto</button>
+            <div ng-show ="cmtsCtrl.show" class="panel panel-primary">
+              <div class="panel-heading">
+                <h1 class="panel-title">Contáctame <button class="close pull-right" ng-Click="cmtsCtrl.toggle()">&times;</button></h1>
+              </div>
+              <div class="panel-body">
+                <div class="jumbotron">
+                  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-offset-md-1 offset-sm-1 offset-xs-1 text-center">
+                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <span class="icono-dos"><img src="assets/img/iconos/tel.png"  class="img"></span><br>
+                        <span class="white-text "><a href="">17-13-55-37</a></span>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                         <span class="icono-dos "><img src="assets/img/iconos/whats.png" class="img"></span><br>
+                        <span class="white-text"><a href="">55-35-96-01-51</a></span>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                         <span class="icono-dos center"><img src="assets/img/iconos/mail.png" class="img"></span><br>
+                         <span class="white-text center"><a href="http:adriana.jauregui.varela@gmail.com">adriana.jauregui.varela@gmail.com</a></span>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 bajar">
+                           <span class="icono-dos "><img src="assets/img/iconos/in.png" class="img"></span><br>
+                           <span class="white-text "><a href="http://linkedin.com/in/maggie-jauregui-varela-b44868105/">Maggie Jauregui</a></span>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 bajar">
+                          <span class="icono-dos "><img src="assets/img/iconos/git.png" class="img"></span><br>
+                          <span class="white-text"><a href="https://github.com/mackyjava">mackyjava</a></span>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 bajar">
+                           <span class="icono-dos"><img src="assets/img/iconos/loc.png" class="img"></span><br><span class="white-text center"><a href="">Álvaro Obregón CDMX</a></span>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center bajar">
+                          <a href="assets/pdf/cvFINAL.pdf" download>
+                        <ul>
+                         <li ><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span><a href="assets/pdf/cvFINAL.pdf" download="">Descarga mi cv!</a></li>
+                      </ul>
+                      </a>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+   <script src="assets/js/lib/angular.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
