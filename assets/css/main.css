@@ -39,7 +39,7 @@ body {
   background-image: url(../img/caffe.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
-  min-height: 600px; }
+  min-height: 700px; }
 
 .page-header {
   border-bottom: 2px solid #413e4a; }
@@ -121,5 +121,105 @@ a {
   right: 3%;
   top: 100px;
   z-index: 10 !important; }
+
+.img-animacion {
+  width: 142px;
+  height: 142px;
+  border-radius: 100%; }
+
+.white {
+  color: white; }
+
+#container {
+  margin: 30px auto;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px; }
+
+#girando {
+  margin: 20px auto;
+  width: 200px;
+  padding: 30px;
+  -webkit-animation-name: girando;
+  -moz-animation-name: girando;
+  -o-animation-name: girando;
+  animation-name: girando;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-duration: 5s;
+  -moz-animation-duration: 5s;
+  -o-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+#girando span {
+  position: absolute;
+  width: 185px;
+  height: 185px;
+  border: 2px solid white;
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+  background-color: #73626E;
+  opacity: .9; }
+
+#uno {
+  -webkit-transform: rotateY(0deg) translateZ(90px);
+  -moz-transform: rotateY(0deg) translateZ(90px);
+  -o-transform: rotateY(0deg) translateZ(90px);
+  transform: rotateY(0deg) translateZ(90px); }
+
+#dos {
+  -webkit-transform: rotateY(-90deg) translateZ(90px);
+  -moz-transform: rotateY(-90deg) translateZ(90px);
+  -o-transform: rotateY(-90deg) translateZ(90px);
+  transform: rotateY(-90deg) translateZ(90px); }
+
+#tres {
+  -webkit-transform: rotateY(-180deg) translateZ(90px);
+  -moz-transform: rotateY(-180deg) translateZ(90px);
+  -o-transform: rotateY(-180deg) translateZ(90px);
+  transform: rotateY(-180deg) translateZ(90px); }
+
+#cuatro {
+  -webkit-transform: rotateY(-270deg) translateZ(90px);
+  -moz-transform: rotateY(-270deg) translateZ(90px);
+  -o-transform: rotateY(-270deg) translateZ(90px);
+  transform: rotateY(-270deg) translateZ(90px); }
+
+@-webkit-keyframes girando {
+  from,20% {
+    -webkit-transform: rotateY(0deg); }
+  30%,40% {
+    -webkit-transform: rotateY(90deg); }
+  50%,60% {
+    -webkit-transform: rotateY(180deg); }
+  70%,80% {
+    -webkit-transform: rotateY(270deg); }
+  90%,to {
+    -webkit-transform: rotateY(360deg); } }
+#mis-proyectos img {
+  width: 250px; }
+
+.modal {
+  width: 900px; }
+
+.img-modal {
+  width: 500px; }
+
+footer {
+  background-image: url("../img/tron.jpg");
+  border: 2px solid #413e4a;
+  height: 40px; }
 
 /*# sourceMappingURL=main.css.map */
